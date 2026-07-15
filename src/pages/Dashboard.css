@@ -1,0 +1,75 @@
+.dashboard-header {
+  margin-bottom: 3rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1rem 0 2rem 0;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.action-icon {
+  color: var(--ink);
+}
+
+.action-card p {
+  color: var(--ink);
+  font-weight: 600;
+  flex: 1;
+  font-size: 1.125rem;
+}
+
+.action-card .btn {
+  margin-top: auto;
+}
+
+.recent-section {
+  margin-top: 3rem;
+}
+
+.recent-palette-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 1rem;
+}
+
+.recent-palette-header h3 {
+  margin: 0;
+}
+
+.date-tag {
+  background-color: var(--ink);
+  color: var(--paper);
+  padding: 0.25rem 0.75rem;
+  margin: 0;
+}
+
+.small-palette .swatches-container {
+  height: 150px;
+  min-height: 150px;
+}

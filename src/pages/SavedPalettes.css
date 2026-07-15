@@ -1,0 +1,68 @@
+.palettes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.palette-card {
+  padding: 0; /* Override default card padding to let display sit flush or padded */
+  padding: 1.5rem;
+}
+
+.palette-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 1rem;
+}
+
+.palette-card-header h3 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.palette-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.danger-icon:hover {
+  background-color: var(--accent);
+  color: var(--ink);
+}
+
+.saved-palette-display .swatches-container {
+  height: 200px;
+  min-height: 200px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.stamp-badge {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  border: 4px solid var(--accent);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  transform: rotate(-4deg);
+  margin-bottom: 2rem;
+  box-shadow: 4px 4px 0 var(--accent);
+}
+
+.empty-state p {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+}

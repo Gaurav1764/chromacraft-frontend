@@ -1,0 +1,75 @@
+.color-swatch {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  border-right: 3px solid var(--ink);
+  transition: background-color 0.1s;
+}
+
+.color-swatch:last-child {
+  border-right: none;
+}
+
+.swatch-color-area {
+  flex: 1;
+  min-height: 150px;
+  width: 100%;
+}
+
+.swatch-label-bar {
+  background-color: var(--ink);
+  color: var(--paper);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-top: 3px solid var(--ink);
+}
+
+.swatch-value {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lock-btn {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--paper);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s;
+}
+
+.lock-btn:hover {
+  background-color: rgba(243, 240, 232, 0.2);
+}
+
+.lock-btn.is-locked {
+  background-color: var(--paper);
+}
+
+/* On hover, add a thick outline to the whole swatch area (or some visual feedback) */
+.color-swatch:hover .swatch-color-area {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .color-swatch {
+    border-right: none;
+    border-bottom: 3px solid var(--ink);
+  }
+  .color-swatch:last-child {
+    border-bottom: none;
+  }
+  
+  .swatch-color-area {
+    min-height: 80px;
+  }
+}

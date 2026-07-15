@@ -1,0 +1,46 @@
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.toast {
+  background-color: var(--ink);
+  color: var(--paper);
+  padding: 1rem 1.5rem;
+  border: 3px solid var(--paper);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 6px 6px 0 rgba(10, 10, 10, 0.5); /* subtle drop shadow for contrast against background */
+  animation: slideIn 0.2s cubic-bezier(0, 0, 0.2, 1) forwards, slideOut 0.2s cubic-bezier(0.4, 0, 1, 1) forwards 2.8s;
+  pointer-events: auto;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}

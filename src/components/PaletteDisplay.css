@@ -1,0 +1,51 @@
+.palette-display-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.proof-label {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.palette-display {
+  position: relative;
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow-brutal);
+  background-color: var(--paper);
+  padding: 1.5rem;
+}
+
+.reg-mark {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--ink);
+  font-weight: 700;
+  user-select: none;
+}
+
+.reg-mark.top-left { top: 0.25rem; left: 0.25rem; }
+.reg-mark.top-right { top: 0.25rem; right: 0.25rem; }
+.reg-mark.bottom-left { bottom: 0.25rem; left: 0.25rem; }
+.reg-mark.bottom-right { bottom: 0.25rem; right: 0.25rem; }
+
+.swatches-container {
+  display: flex;
+  height: 50vh;
+  min-height: 300px;
+  border: 3px solid var(--ink);
+}
+
+@media (max-width: 768px) {
+  .swatches-container {
+    flex-direction: column;
+    height: auto;
+  }
+}
